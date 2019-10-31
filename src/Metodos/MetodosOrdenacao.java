@@ -10,7 +10,7 @@ public class MetodosOrdenacao {
     public MetodosOrdenacao(){}
 
     //Seleção
-    public static void selecao(ArrayList<Integer> vetor){
+    public void selecao(ArrayList<Integer> vetor){
          int i, j, posMenor, aux;
 
          for(i = 0; i < vetor.size() - 1; i++){

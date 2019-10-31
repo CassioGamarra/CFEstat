@@ -10,7 +10,9 @@ import java.util.Random;
  */
 public class MetodosAmostragem {
     public MetodosAmostragem(){}
-
+    
+    MetodosOrdenacao ordenacao = new MetodosOrdenacao();
+    
     //Método de Amostragem Aleatória Com Reposição
     public void aleatoriaComReposicao(){
         
@@ -23,21 +25,21 @@ public class MetodosAmostragem {
         pop = Integer.parseInt(view.getFieldTamanhoPopulacaoSemRep().getText());
         amostra = Integer.parseInt(view.getFieldTamanhoAmostraSemRep().getText());
         
-        System.out.println(pop);
-        System.out.println(amostra);
-        
         Random random = new Random();
         for(i = 0; i < amostra; i++){
             vetor.add((random.nextInt(pop)+1));
         }
+        ordenacao.selecao(vetor);
         String titulo = "TESTE\n";
         String msg = "";
         for(i = 0; i < amostra; i++){
-            msg = msg + vetor.get(i)+"\t";
+            msg = msg+vetor.get(i)+"\t";
         }
+        System.out.println(msg.length());
         view.getTextAreaResultadoSemReposicao().setText(titulo+msg);
     }
     //Método de Amostragem Sistemática
     public void sistematica(){
+        
     }
 }

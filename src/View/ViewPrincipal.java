@@ -119,10 +119,8 @@ public class ViewPrincipal extends javax.swing.JFrame {
         dialogAleatoriaComReposicao.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         dialogAleatoriaComReposicao.setTitle("Amostragem Aleatória - Com Reposição");
         dialogAleatoriaComReposicao.setBackground(new java.awt.Color(255, 255, 255));
-        dialogAleatoriaComReposicao.setMaximumSize(new java.awt.Dimension(460, 350));
         dialogAleatoriaComReposicao.setMinimumSize(new java.awt.Dimension(460, 350));
         dialogAleatoriaComReposicao.setName("Amostragem Aleatória - Com Reposição");
-        dialogAleatoriaComReposicao.setPreferredSize(new java.awt.Dimension(460, 350));
         dialogAleatoriaComReposicao.setResizable(false);
 
         panelComRep.setBackground(new java.awt.Color(255, 255, 255));
@@ -243,10 +241,10 @@ public class ViewPrincipal extends javax.swing.JFrame {
         dialogAleatoriaSemReposicao.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         dialogAleatoriaSemReposicao.setTitle("Amostragem Aleatória - Sem Reposição");
         dialogAleatoriaSemReposicao.setBackground(new java.awt.Color(255, 255, 255));
-        dialogAleatoriaSemReposicao.setMaximumSize(new java.awt.Dimension(460, 350));
-        dialogAleatoriaSemReposicao.setMinimumSize(new java.awt.Dimension(460, 350));
+        dialogAleatoriaSemReposicao.setMaximumSize(new java.awt.Dimension(490, 420));
+        dialogAleatoriaSemReposicao.setMinimumSize(new java.awt.Dimension(490, 420));
         dialogAleatoriaSemReposicao.setName("Amostragem Aleatória - Sem Reposição");
-        dialogAleatoriaSemReposicao.setPreferredSize(new java.awt.Dimension(460, 350));
+        dialogAleatoriaSemReposicao.setPreferredSize(new java.awt.Dimension(490, 420));
         dialogAleatoriaSemReposicao.setResizable(false);
 
         panelAleatoriaSemReposicao.setBackground(new java.awt.Color(255, 255, 255));
@@ -305,6 +303,7 @@ public class ViewPrincipal extends javax.swing.JFrame {
         textAreaResultadoSemReposicao.setLineWrap(true);
         textAreaResultadoSemReposicao.setRows(5);
         textAreaResultadoSemReposicao.setText("\n");
+        textAreaResultadoSemReposicao.setWrapStyleWord(true);
         textAreaResultadoSemReposicao.setBorder(null);
         jScrollPane6.setViewportView(textAreaResultadoSemReposicao);
 
@@ -320,7 +319,7 @@ public class ViewPrincipal extends javax.swing.JFrame {
         panelResultadoSemRepLayout.setVerticalGroup(
             panelResultadoSemRepLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelResultadoSemRepLayout.createSequentialGroup()
-                .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 186, Short.MAX_VALUE)
+                .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 209, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -337,7 +336,7 @@ public class ViewPrincipal extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(panelAleatoriaSemReposicaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btnCancelarSemRep, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnExecutarSemRep, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE))))
+                            .addComponent(btnExecutarSemRep, javax.swing.GroupLayout.DEFAULT_SIZE, 151, Short.MAX_VALUE))))
                 .addContainerGap())
         );
         panelAleatoriaSemReposicaoLayout.setVerticalGroup(
@@ -360,11 +359,15 @@ public class ViewPrincipal extends javax.swing.JFrame {
         dialogAleatoriaSemReposicao.getContentPane().setLayout(dialogAleatoriaSemReposicaoLayout);
         dialogAleatoriaSemReposicaoLayout.setHorizontalGroup(
             dialogAleatoriaSemReposicaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelAleatoriaSemReposicao, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(dialogAleatoriaSemReposicaoLayout.createSequentialGroup()
+                .addComponent(panelAleatoriaSemReposicao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         dialogAleatoriaSemReposicaoLayout.setVerticalGroup(
             dialogAleatoriaSemReposicaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelAleatoriaSemReposicao, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(dialogAleatoriaSemReposicaoLayout.createSequentialGroup()
+                .addComponent(panelAleatoriaSemReposicao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 65, Short.MAX_VALUE))
         );
 
         dialogAleatoriaSemReposicao.setLocationRelativeTo(null);
@@ -700,7 +703,9 @@ public class ViewPrincipal extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ViewPrincipal().setVisible(true);
+                ViewPrincipal view = new ViewPrincipal();
+                view.setLocationRelativeTo(null);
+                view.setVisible(true);
             }
         });
     }
