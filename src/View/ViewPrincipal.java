@@ -76,8 +76,8 @@ public class ViewPrincipal extends javax.swing.JFrame {
         panelEntradaComRep = new javax.swing.JPanel();
         fieldTamanhoPopulacaoComRep = new javax.swing.JTextField();
         fieldTamanhoAmostraComRep = new javax.swing.JTextField();
-        btnExecutarComRep = new javax.swing.JButton();
         btnCancelarComRep = new javax.swing.JButton();
+        btnExecutarComRep = new javax.swing.JButton();
         panelResultadoComRep = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
         textAreaResultadoComReposicao = new javax.swing.JTextArea();
@@ -96,8 +96,8 @@ public class ViewPrincipal extends javax.swing.JFrame {
         panelEntradaSistematica = new javax.swing.JPanel();
         fieldTamanhoPopulacaoSistematica = new javax.swing.JTextField();
         fieldTamanhoAmostraSistematica = new javax.swing.JTextField();
-        btnExecutarSistematica = new javax.swing.JButton();
         btnCancelarSistematica = new javax.swing.JButton();
+        btnExecutarSistematica = new javax.swing.JButton();
         panelResultadoSistematica = new javax.swing.JPanel();
         jScrollPane7 = new javax.swing.JScrollPane();
         textAreaResultadoSistematica = new javax.swing.JTextArea();
@@ -162,9 +162,19 @@ public class ViewPrincipal extends javax.swing.JFrame {
                 .addContainerGap(29, Short.MAX_VALUE))
         );
 
-        btnExecutarComRep.setText("Cancelar");
+        btnCancelarComRep.setText("Cancelar");
+        btnCancelarComRep.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelarComRepActionPerformed(evt);
+            }
+        });
 
-        btnCancelarComRep.setText("Executar");
+        btnExecutarComRep.setText("Executar");
+        btnExecutarComRep.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnExecutarComRepActionPerformed(evt);
+            }
+        });
 
         panelResultadoComRep.setBackground(new java.awt.Color(255, 255, 255));
         panelResultadoComRep.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true), "Resultados", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 14), new java.awt.Color(0, 0, 153))); // NOI18N
@@ -174,6 +184,7 @@ public class ViewPrincipal extends javax.swing.JFrame {
         textAreaResultadoComReposicao.setLineWrap(true);
         textAreaResultadoComReposicao.setRows(5);
         textAreaResultadoComReposicao.setText("\n");
+        textAreaResultadoComReposicao.setWrapStyleWord(true);
         textAreaResultadoComReposicao.setBorder(null);
         jScrollPane3.setViewportView(textAreaResultadoComReposicao);
 
@@ -205,8 +216,8 @@ public class ViewPrincipal extends javax.swing.JFrame {
                         .addComponent(panelEntradaComRep, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(panelComRepLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnExecutarComRep, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnCancelarComRep, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE))))
+                            .addComponent(btnCancelarComRep, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnExecutarComRep, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE))))
                 .addContainerGap())
         );
         panelComRepLayout.setVerticalGroup(
@@ -218,9 +229,9 @@ public class ViewPrincipal extends javax.swing.JFrame {
                         .addComponent(panelEntradaComRep, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panelComRepLayout.createSequentialGroup()
                         .addGap(32, 32, 32)
-                        .addComponent(btnCancelarComRep, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnExecutarComRep, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnExecutarComRep, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(btnCancelarComRep, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(panelResultadoComRep, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -415,9 +426,19 @@ public class ViewPrincipal extends javax.swing.JFrame {
                 .addContainerGap(29, Short.MAX_VALUE))
         );
 
-        btnExecutarSistematica.setText("Cancelar");
+        btnCancelarSistematica.setText("Cancelar");
+        btnCancelarSistematica.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelarSistematicaActionPerformed(evt);
+            }
+        });
 
-        btnCancelarSistematica.setText("Executar");
+        btnExecutarSistematica.setText("Executar");
+        btnExecutarSistematica.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnExecutarSistematicaActionPerformed(evt);
+            }
+        });
 
         panelResultadoSistematica.setBackground(new java.awt.Color(255, 255, 255));
         panelResultadoSistematica.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true), "Resultados", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 14), new java.awt.Color(0, 0, 153))); // NOI18N
@@ -427,6 +448,7 @@ public class ViewPrincipal extends javax.swing.JFrame {
         textAreaResultadoSistematica.setLineWrap(true);
         textAreaResultadoSistematica.setRows(5);
         textAreaResultadoSistematica.setText("\n");
+        textAreaResultadoSistematica.setWrapStyleWord(true);
         textAreaResultadoSistematica.setBorder(null);
         jScrollPane7.setViewportView(textAreaResultadoSistematica);
 
@@ -458,8 +480,8 @@ public class ViewPrincipal extends javax.swing.JFrame {
                         .addComponent(panelEntradaSistematica, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(panelSistematicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnExecutarSistematica, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnCancelarSistematica, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE))))
+                            .addComponent(btnCancelarSistematica, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnExecutarSistematica, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE))))
                 .addContainerGap())
         );
         panelSistematicaLayout.setVerticalGroup(
@@ -471,9 +493,9 @@ public class ViewPrincipal extends javax.swing.JFrame {
                         .addComponent(panelEntradaSistematica, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panelSistematicaLayout.createSequentialGroup()
                         .addGap(32, 32, 32)
-                        .addComponent(btnCancelarSistematica, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnExecutarSistematica, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnExecutarSistematica, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(btnCancelarSistematica, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(panelResultadoSistematica, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -672,6 +694,26 @@ public class ViewPrincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
         dialogAleatoriaSemReposicao.dispose();
     }//GEN-LAST:event_btnCancelarSemRepActionPerformed
+
+    private void btnExecutarComRepActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExecutarComRepActionPerformed
+        // TODO add your handling code here:
+        amostragem.aleatoriaComReposicao(this);
+    }//GEN-LAST:event_btnExecutarComRepActionPerformed
+
+    private void btnCancelarComRepActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarComRepActionPerformed
+        // TODO add your handling code here:
+        dialogAleatoriaComReposicao.dispose();
+    }//GEN-LAST:event_btnCancelarComRepActionPerformed
+
+    private void btnCancelarSistematicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarSistematicaActionPerformed
+        // TODO add your handling code here:
+        dialogAmostragemSistematica.dispose();
+    }//GEN-LAST:event_btnCancelarSistematicaActionPerformed
+
+    private void btnExecutarSistematicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExecutarSistematicaActionPerformed
+        // TODO add your handling code here:
+        amostragem.sistematica(this);
+    }//GEN-LAST:event_btnExecutarSistematicaActionPerformed
 
     /**
      * @param args the command line arguments
