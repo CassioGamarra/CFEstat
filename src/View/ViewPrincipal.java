@@ -252,10 +252,8 @@ public class ViewPrincipal extends javax.swing.JFrame {
         dialogAleatoriaSemReposicao.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         dialogAleatoriaSemReposicao.setTitle("Amostragem Aleatória - Sem Reposição");
         dialogAleatoriaSemReposicao.setBackground(new java.awt.Color(255, 255, 255));
-        dialogAleatoriaSemReposicao.setMaximumSize(new java.awt.Dimension(490, 420));
         dialogAleatoriaSemReposicao.setMinimumSize(new java.awt.Dimension(490, 420));
         dialogAleatoriaSemReposicao.setName("Amostragem Aleatória - Sem Reposição");
-        dialogAleatoriaSemReposicao.setPreferredSize(new java.awt.Dimension(490, 420));
         dialogAleatoriaSemReposicao.setResizable(false);
 
         panelAleatoriaSemReposicao.setBackground(new java.awt.Color(255, 255, 255));
@@ -386,10 +384,8 @@ public class ViewPrincipal extends javax.swing.JFrame {
         dialogAmostragemSistematica.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         dialogAmostragemSistematica.setTitle("Amostragem Sistemática");
         dialogAmostragemSistematica.setBackground(new java.awt.Color(255, 255, 255));
-        dialogAmostragemSistematica.setMaximumSize(new java.awt.Dimension(460, 350));
         dialogAmostragemSistematica.setMinimumSize(new java.awt.Dimension(460, 350));
         dialogAmostragemSistematica.setName("Amostragem Sistemática");
-        dialogAmostragemSistematica.setPreferredSize(new java.awt.Dimension(460, 350));
         dialogAmostragemSistematica.setResizable(false);
 
         panelSistematica.setBackground(new java.awt.Color(255, 255, 255));
@@ -514,6 +510,9 @@ public class ViewPrincipal extends javax.swing.JFrame {
         dialogAmostragemSistematica.setLocationRelativeTo(null);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(600, 420));
+        setMinimumSize(new java.awt.Dimension(600, 420));
+        setPreferredSize(new java.awt.Dimension(600, 420));
         setResizable(false);
 
         jPanelHome.setBackground(new java.awt.Color(255, 255, 255));
@@ -539,8 +538,12 @@ public class ViewPrincipal extends javax.swing.JFrame {
 
         jPanelAleatoria.setBackground(new java.awt.Color(255, 255, 255));
 
+        textAreaSobreAleatoria.setEditable(false);
         textAreaSobreAleatoria.setColumns(20);
+        textAreaSobreAleatoria.setLineWrap(true);
         textAreaSobreAleatoria.setRows(5);
+        textAreaSobreAleatoria.setText("Uma amostra aleatória simples é aquela obtida de tal modo que todos os indivíduos da população têm igual probabilidade de serem selecionados.Para se obter uma amostra aleatória simples, atribui-se, inicialmente, um número de ordem a cada elemento da população. A seguir, por meio de um dispositivo aleatório qualquer, seleciona-se ao acaso a quantidade  desejada de indivíduos. Um procedimento aleatório a ser utilizado pode  ser colocar em uma urna todos os números que serão submetidos ao sorteio, retirando depois alguns às cegas. \n\nPode-se ainda usar  os  números  de  loteria  sorteados  nos  últimos  anos,  ou  uma  tabela  de  números  aleatórios,  ou  ainda programas de computador para selecionar aleatoriamente os componentes da amostra.Um ponto importante a salientar é que, usando este procedimento, nenhum indivíduo, por ter esta ou aquela característica, terá oportunidade maior de ser escolhido, pois a escolha independe da vontade do selecionador da amostra.");
+        textAreaSobreAleatoria.setWrapStyleWord(true);
         jScrollPane1.setViewportView(textAreaSobreAleatoria);
 
         btnComReposicao.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -592,7 +595,10 @@ public class ViewPrincipal extends javax.swing.JFrame {
         jPanelSistematica.setBackground(new java.awt.Color(255, 255, 255));
 
         textAreaSobreSistematica.setColumns(20);
+        textAreaSobreSistematica.setLineWrap(true);
         textAreaSobreSistematica.setRows(5);
+        textAreaSobreSistematica.setText("Às vezes, a população é constituída de subpopulações ou estratos e pode ser razoável supor que a variável de interesse apresenta comportamento diferente nos distintos estratos. Neste caso, para que uma amostra  seja  representativa,  ela  deve  apresentar  a  mesma  estratificação  do  universo  de  origem.  Para garantir que o procedimento aleatório produza uma amostra estratificada adequada, deve-se:\n1. Verificar quais os estratos presentes na população.\n2. Calcular seus tamanhos relativos (proporções).\n3. Determinar o tamanho dos estratos na amostra, observando estas mesmas proporções.\n4.  Obter  aleatoriamente  os  elementos  para  cada  estrato,  ou  sorteando  dentro  de  cada  estrato,  ou sorteando dentro da população e preenchendo os espaços reservados para cada estrato.");
+        textAreaSobreSistematica.setWrapStyleWord(true);
         jScrollPane2.setViewportView(textAreaSobreSistematica);
 
         btnSistematica.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
