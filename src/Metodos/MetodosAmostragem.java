@@ -28,7 +28,7 @@ public class MetodosAmostragem {
         
         ordenacao.selecao(vetor);
         
-        String titulo = "TESTE\n";
+        String titulo = "Amostragem aleatória com reposição: \n";
         String msg = "";
         for(i = 0; i < amostra; i++){
             msg = msg+vetor.get(i)+"\t";
@@ -62,7 +62,7 @@ public class MetodosAmostragem {
         
         ordenacao.selecao(vetor);
         
-        String titulo = "TESTE\n";
+        String titulo = "Amostragem aleatória sem reposição: \n";
         String msg = "";
         for(i = 0; i < amostra; i++){
             msg = msg+vetor.get(i)+"\t";
@@ -85,6 +85,7 @@ public class MetodosAmostragem {
         kAnterior = k;
         
         inicio = random.nextInt(k)+1;
+        vetor.add(inicio);
         
         for( ;k < pop; k =  k+kAnterior){
             vetor.add(inicio+k);
